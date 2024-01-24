@@ -1,7 +1,7 @@
 <script>
 import BaseComponent from 'primevue/basecomponent';
 import BaseIconStyle from 'primevue/baseicon/style';
-import { ObjectUtils } from 'primevue/utils';
+import { ObjectUtils, UniqueComponentId } from 'primevue/utils';
 
 export default {
     name: 'BaseIcon',
@@ -34,6 +34,11 @@ export default {
                 'aria-label': !isLabelEmpty ? this.label : undefined,
                 'aria-hidden': isLabelEmpty
             };
+        }
+    },
+    computed: {
+        pathId() {
+            return UniqueComponentId('pv_icon_clip_pv_id_');
         }
     }
 };

@@ -45,11 +45,15 @@ export default {
         },
         autoOptionFocus: {
             type: Boolean,
-            default: false
+            default: true
         },
         selectOnFocus: {
             type: Boolean,
             default: false
+        },
+        focusOnHover: {
+            type: Boolean,
+            default: true
         },
         filterMessage: {
             type: String,
